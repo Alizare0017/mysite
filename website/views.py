@@ -5,10 +5,10 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def home(request):
-    return HttpResponse('<h1>Home page<h1>')
+    return render(request,'website/home.html')
 
 def about(request):
-    return HttpResponse('<h1>about<h1>')
+    return render(request,'about.html')
 
 def contact(request):
-    return HttpResponse('<h1>contact<h1>')
+    return render(request,'contact.html')
