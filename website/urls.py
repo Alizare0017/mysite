@@ -2,10 +2,11 @@
 from django.urls import path
 from website.views import *
 
+app_name = 'website'
 
 urlpatterns = [
-    path('',home),
-    path('contact',contact),
-    path('about',about),
-    path('elements',elements)
+    path('',index,name='index'),
+    path('contact',contact,name='contact'),
+    path('about',about,name='about'),
+    path('elements',elements,name='elements')
 ] 
