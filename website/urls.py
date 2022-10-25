@@ -11,4 +11,5 @@ urlpatterns = [
     path('contact',contact,name='contact'),
     path('about',about,name='about'),
     path('elements',elements,name='elements'),
+    #path('<str:pid>',test,name='test'),
 ] 

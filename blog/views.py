@@ -1,10 +1,20 @@
 from urllib import request
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponse
+from blog.models import Post
 
-def blog_single(request):
-    return render(request,'blog/blog-single.html')
+def blog_single(request,pid):
+    posts = get_object_or_404(Post,id=pid,status=1)
+    context = {'posts' : posts}
+    return render(request,'blog/blog-single.html',context)
 
 def blog_home(request):
-    return render(request,'blog/blog-home.html')
+    posts = Post.objects.filter(status=1)
+    context = {'posts' : posts}
+    return render(request,'blog/blog-home.html',context)
+
+def test(request,testID) :
+    posts = Post.objects.filter(id=testID)
+    context = {'posts' : posts}
+    return render(request,'test.html',context)

@@ -9,3 +9,6 @@ class Contact(models.Model):
     email = models.EmailField()
     updated_date = models.TimeField(auto_now=True )
     created_date = models.TimeField(auto_now_add=True)
+    
+    def __str__(self) :
+        return self.name

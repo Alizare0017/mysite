@@ -1,9 +1,9 @@
-
-
 from urllib import request
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
+from website.models import *
+from blog.models import Post
 
 def index(request):
     return render(request,'website/index.html')
