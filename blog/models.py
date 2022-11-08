@@ -10,8 +10,13 @@ class Category(models.Model):
 
         
 class Post(models.Model):
+<<<<<<< Updated upstream
     image = models.ImageField(upload_to='blog/',default='blog/default.jpg')
     author = models.ForeignKey(User,on_delete=models.SET_NULL,null=True)
+=======
+    # image
+    # author
+>>>>>>> Stashed changes
     title = models.CharField(max_length=255)
     content = models.TextField()
     # tag

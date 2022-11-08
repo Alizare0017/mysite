@@ -1,3 +1,8 @@
+<<<<<<< Updated upstream
+=======
+
+from blog.models import Post
+>>>>>>> Stashed changes
 from urllib import request
 from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404

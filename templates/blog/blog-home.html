@@ -50,8 +50,13 @@
 						<div class="overlay overlay-bg"></div>
 						<a href="#" target="_blank">
 							<div class="thumb">
+<<<<<<< Updated upstream
 								<img class="content-image img-fluid d-block mx-auto" src="{% static 'img/blog/cat-widget1.jpg' %}"
 									alt="">												
+=======
+								<img class="content-image img-fluid d-block mx-auto" src="{% static 'img/blog/cat-widget2.jpg' %}"
+									alt="">
+>>>>>>> Stashed changes
 							</div>
 							<div class="content-details">
 								<h4 class="content-title mx-auto text-uppercase">Politics</h4>
@@ -103,7 +108,11 @@
 						<div class="user-details row">
 							<p class="user-name col-lg-12 col-md-12 col-6"><a href="#">{{post.author.get_full_name}}</a> <span
 									class="lnr lnr-user"></span></p>
+<<<<<<< Updated upstream
 							<p class="date col-lg-12 col-md-12 col-6"><a href="#">{{post.updated_date}}</a> <span
+=======
+							<p class="date col-lg-12 col-md-12 col-6"><a href="#">{{post.published_date}}</a> <span
+>>>>>>> Stashed changes
 									class="lnr lnr-calendar-full"></span></p>
 							<p class="view col-lg-12 col-md-12 col-6"><a href="#">{{post.counted_view}}</a> <span
 									class="lnr lnr-eye"></span></p>
@@ -113,7 +122,11 @@
 					</div>
 					<div class="col-lg-9 col-md-9 ">
 						<div class="feature-img">
+<<<<<<< Updated upstream
 							<img class="img-fluid" src="{{post.image.url}}" alt="">
+=======
+							<img class="img-fluid" src="{% static 'img/blog/feature-img1.jpg' %}" alt="">
+>>>>>>> Stashed changes
 						</div>
 						<a class="posts-title" href="{% url 'blog:blog-single' pid=post.id %}">
 							<h3>{{post.title}}</h3>
@@ -159,7 +172,11 @@
 						</form>
 					</div>
 					<div class="single-sidebar-widget user-info-widget">
+<<<<<<< Updated upstream
 						<img src="{% static 'img/blog/user-info.png' %}" alt="">
+=======
+						<img src="{% static 'img/blog/user-info.png" alt="">
+>>>>>>> Stashed changes
 						<a href="#">
 							<h4>Charlie Barber</h4>
 						</a>
