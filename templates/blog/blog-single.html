@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load blog_tag %}
 {% block content %}
 
 	<!-- start banner Area -->
@@ -56,11 +57,7 @@
 							</div>
 						</div>
 						<div class="col-lg-9 col-md-9">
-<<<<<<< Updated upstream
 							<h3 class="mt-20 mb-20">{{posts.title}}</h3>
-=======
-							<h3 class="mt-20 mb-20">{{posts.content}}</h3>
->>>>>>> Stashed changes
 							<p class="excert">
 								{{posts.content}}
 							</p>

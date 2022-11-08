@@ -10,24 +10,21 @@ class Category(models.Model):
 
         
 class Post(models.Model):
-<<<<<<< Updated upstream
     image = models.ImageField(upload_to='blog/',default='blog/default.jpg')
     author = models.ForeignKey(User,on_delete=models.SET_NULL,null=True)
-=======
-    # image
-    # author
->>>>>>> Stashed changes
+
     title = models.CharField(max_length=255)
     content = models.TextField()
     # tag
     category = models.ManyToManyField(Category)
     counted_view = models.IntegerField(default=0)
     status = models.BooleanField(default=False)
-    published_date = models.TimeField(null=True)
     created_date = models.TimeField(auto_now_add=True)
     updated_date = models.TimeField(auto_now=True)
     
     def __str__(self):
-       return "{} - {}".format(self.title, self.id)
+       return "{} - {}".format(self.title, self.pk)
     
+    def snippest(self):
+        return self.content[:100] + ' . . .'
     
