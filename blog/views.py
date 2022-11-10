@@ -14,7 +14,5 @@ def blog_home(request):
     context = {'posts' : posts}
     return render(request,'blog/blog-home.html',context)
 
-def test(request,testID) :
-    posts = Post.objects.filter(id=testID)
-    context = {'posts' : posts}
-    return render(request,'test.html',context)
+def test(request) :
+    return render(request,'test.html')

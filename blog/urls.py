@@ -10,5 +10,5 @@ app_name = 'blog'
 urlpatterns = [
     path('blog/<int:pid>',blog_single,name='blog-single'),
     path('blog-home',blog_home,name='blog-home'),
-    path('test/<str:testID>',test,name='test'),
+    path('test',test,name='test'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
