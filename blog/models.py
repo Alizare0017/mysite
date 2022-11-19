@@ -19,9 +19,11 @@ class Post(models.Model):
     category = models.ManyToManyField(Category)
     counted_view = models.IntegerField(default=0)
     status = models.BooleanField(default=False)
-    created_date = models.TimeField(auto_now_add=True)
+    created_date = models.DateTimeField(auto_now=True,null=True)
     updated_date = models.TimeField(auto_now=True)
-    
+    class Meta :
+        ordering = ['id']
+
     def __str__(self):
        return "{} - {}".format(self.title, self.pk)
     
