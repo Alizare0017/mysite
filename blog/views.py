@@ -17,7 +17,7 @@ def blog_home(request,**kwargs):
     if kwargs.get('author_username'):
         posts = posts.filter(author__username=kwargs['author_username'])
     
-    posts = Paginator(posts,1)
+    posts = Paginator(posts,2)
     try :
         page_number = request.GET.get('page')
         posts = posts.get_page(page_number)

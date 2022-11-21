@@ -9,12 +9,13 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Working with template tags</h1>
 
-    <p>
-        test : {% postcategories %}
+    <form action="{% url 'website:test' %}" method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit"> submit</button>
 
-    </p>
+    </form>
 
 </body>
 </html>
