@@ -3,6 +3,7 @@ from blog.models import Post
 from website.models import *
 from website.models import Contact, Newsletter
 from website.forms import NameForm, ContactForm, NewsletterForm
+from django.contrib import messages
 
 def index(request):
     posts = Post.objects.filter(status=1).order_by('created_date')[:3]
@@ -19,6 +20,11 @@ def contact(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
+            messages.success(request, "Your message recived")
+
+        else: 
+            messages.error(request, "Somethong went wrong ! ")
+
     form = ContactForm()
     return render(request,'website/contact.html',{'form':form})
 

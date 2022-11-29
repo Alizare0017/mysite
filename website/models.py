@@ -1,10 +1,11 @@
 from django.db import models
+from django_extensions.validators import HexValidator
 
 # Create your models here.
 
 class Contact(models.Model):
-    name = models.CharField(max_length=255)
-    subject = models.CharField(max_length=255)
+    name = models.CharField(max_length=64, validators=[HexValidator(length=64)])
+    subject = models.CharField(max_length=255,null=True)
     message = models.TextField()
     email = models.EmailField()
     updated_date = models.TimeField(auto_now=True )
