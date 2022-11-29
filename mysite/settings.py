@@ -44,14 +44,15 @@ INSTALLED_APPS = [
     'robots',
     'django_extensions',
     'website.apps.WebsiteConfig',
-    'blog'
+    'blog',
+    "taggit",
 ]
 
 # sitemap setup
 SITE_ID = 2
 
 #robots setup
-ROBOTS_USE_SITEMAP = False
+ROBOTS_USE_SITEMAP = True
 ROBOTS_USE_HOST = False
 
 MESSAGE_TAGS = {
