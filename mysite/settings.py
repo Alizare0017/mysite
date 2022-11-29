@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'website.apps.WebsiteConfig',
     'blog',
     "taggit",
+    "accounts",
 ]
 
 # sitemap setup
